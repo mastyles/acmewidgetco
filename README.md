@@ -2,20 +2,14 @@
 
 ### How to run the application:
 
-- [First, just clone or download the project as a zipped file.]
-- [Extract the project and open a terminal on that path.]
-- [Open the WampServer (local web server for PHPMyAdmin and the localhost web support).]
-- [Create a new database named acmewidco_db and run the migrations on the terminal as:
-php artisan migrate]
-- [Run the app with the command: php artisan serve
-It will provide you localhost browser url along with port. Usually it gives you it's
-default url: localhost:8000/
-Your app will successfully be running. (More details about the app the navigation/flow are
-below in the "About application" section).]
-- [There are three main database tables: Users, Products and Cart. The products table will be empty
-initially. Kindly either insert three rows/records in the products table for each widget or
-simply import the MySQL file to insert the already inserted products, users and carts data for
-testing purpose.]
+- First, just clone or download the project as a zipped file.
+- Extract the project and open a terminal on that path.
+- Open the WampServer (local web server for PHPMyAdmin and the localhost web support).
+- Create a new database named acmewidco_db and run the migrations on the terminal as: php artisan migrate
+- Run the app with the command: php artisan serve
+It will provide you localhost browser url along with port. Usually it gives you it's default url: localhost:8000/
+Your app will successfully be running. (More details about the app the navigation/flow are below in the "About application" section).
+- There are three main database tables: Users, Products and Cart. The products table will be empty initially. Kindly either insert three rows/records in the products table for each widget or simply import the MySQL file to insert the already inserted products, users and carts data for testing purpose.
 
 (Kindly run npm i, npm run dev and composer dump-autoload if there are any problems with initiating the project.
 And kindly feel free to ask me if still there are any issues.)
