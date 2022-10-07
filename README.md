@@ -1,66 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## About Acme Widget Co Web App
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+### How to run the application:
 
-## About Laravel
+- [First, just clone or download the project as a zipped file.]
+- [Extract the project and open a terminal on that path.]
+- [Open the WampServer (local web server for PHPMyAdmin and the localhost web support).]
+- [Create a new database named acmewidco_db and run the migrations on the terminal as:
+php artisan migrate]
+- [Run the app with the command: php artisan serve
+It will provide you localhost browser url along with port. Usually it gives you it's
+default url: localhost:8000/
+Your app will successfully be running. (More details about the app the navigation/flow are
+below in the "About application" section).]
+- [There are three main database tables: Users, Products and Cart. The products table will be empty
+initially. Kindly either insert three rows/records in the products table for each widget or
+simply import the MySQL file to insert the already inserted products, users and carts data for
+testing purpose.]
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+(Kindly run npm i, npm run dev and composer dump-autoload if there are any problems with initiating the project.
+And kindly feel free to ask me if still there are any issues.)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### About the application:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The app is very easy to use and simplified as much as possible, along with the events. It's totally responsive and the front end is build using Bootstrap and Bulma CSS. All the possible business logic in separated and used in the respective controllers so that the code in the view
+looks nicer and simple.
 
-## Learning Laravel
+The front or the first page is the welcome page where all the products are available. On the navbar (the top of the page), there is an option of login and register. Register a new user and login into the portal i.e. the welcome (root) page.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The products can not be purchased until and unless a user is logged in. There are checks everywhere which shows only public information about the app and the rest of user details are shown once the user logs in.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+As long as you start purchasing more and more products, they get populated in the descending (latest first on the top) in a tabular form below the products along with the information of if an special offered product is purchased or not. For red widget products, it's price is alternatively stored and calculated using a boolean field 'is_offer' in the cart table in the database.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+I have added some extra features besides the required ones but I couldn't finish them as I had to deliver and also it would have changed the calculating logic as well:
+Add a new product, remove a purchased product.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+I hope you will like the project and let me know your reviews. Thank you for visiting it.
